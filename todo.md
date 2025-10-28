@@ -72,3 +72,6 @@
 - [x] Update checkout to use Netlify Functions instead of tRPC
 - [x] Create netlify.toml configuration file
 - [x] Remove server-side code dependencies
+
+## Bugs - Netlify Deployment
+- [x] Fix Netlify 404 error - routing not working
