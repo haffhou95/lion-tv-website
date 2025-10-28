@@ -265,9 +265,11 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'border border-primary text-primary hover:bg-primary/10'}`}>
-                    Get {plan.name} Code
-                  </Button>
+                  <a href="/checkout">
+                    <Button className={`w-full ${plan.popular ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'border border-primary text-primary hover:bg-primary/10'}`}>
+                      Get {plan.name} Code
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}
