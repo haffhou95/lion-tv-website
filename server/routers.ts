@@ -44,7 +44,7 @@ export const appRouter = router({
             paymentMethod: "cash_on_delivery",
           });
 
-          const orderId = (orderResult as any).insertId || (orderResult as any)[0]?.id;
+          const orderId = (orderResult as any).insertId;
 
           for (const item of input.items) {
             await createOrderItem({

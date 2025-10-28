@@ -61,3 +61,6 @@
 
 ## New Requests
 - [x] Add 6-month subscription plan to pricing
+
+## Bugs
+- [x] Fix order creation error - "Failed to create order"

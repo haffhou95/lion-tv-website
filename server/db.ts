@@ -99,13 +99,19 @@ export async function createOrder(orderData: InsertOrder) {
   }
 
   const result = await db.insert(orders).values(orderData);
-  return result;
+  // Get the inserted order ID
+  const insertedOrder = await db.select().from(orders).where(eq(orders.customerEmail, orderData.customerEmail)).orderBy((t) => t.id).limit(1);
+  return { insertId: insertedOrder[0]?.id };
 }
 
 export async function createOrderItem(itemData: InsertOrderItem) {
   const db = await getDb();
   if (!db) {
     throw new Error("Database not available");
+  }
+
+  if (!itemData.orderId) {
+    throw new Error("orderId is required");
   }
 
   const result = await db.insert(orderItems).values(itemData);
