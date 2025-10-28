@@ -65,3 +65,6 @@
 ## Bugs
 - [x] Fix order creation error - "Failed to create order"
 - [x] Fix pricing plans - make them clickable to add to cart
+
+## Vercel Deployment Bugs
+- [x] Fix vercel.json functions pattern error
