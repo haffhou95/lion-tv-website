@@ -1,9 +1,11 @@
+import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Zap, Smartphone, Tv, HelpCircle, Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
+  const { user, loading, isAuthenticated, logout } = useAuth();
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const faqs = [
@@ -96,6 +98,7 @@ export default function Home() {
           <Mail className="w-6 h-6" />
         </a>
       </div>
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container py-4 flex items-center justify-between">
@@ -110,9 +113,20 @@ export default function Home() {
             <a href="#faq" className="text-sm hover:text-primary transition">FAQ</a>
             <a href="#contact" className="text-sm hover:text-primary transition">Contact</a>
           </div>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Get Code Now
-          </Button>
+          <div className="flex items-center gap-3">
+            {isAuthenticated && user ? (
+              <>
+                <span className="text-sm text-muted-foreground">Hi, {user.name}</span>
+                <Button variant="outline" size="sm" onClick={logout}>
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Get Code Now
+              </Button>
+            )}
+          </div>
         </div>
       </nav>
 
@@ -132,9 +146,11 @@ export default function Home() {
               Unlock access to 1000+ live TV channels, movies, and on-demand content. Stream on all your devices with crystal-clear quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base">
-                Buy Activation Code
-              </Button>
+              <a href="/checkout">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base">
+                  Buy Activation Code
+                </Button>
+              </a>
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-base">
                 Learn More
               </Button>
