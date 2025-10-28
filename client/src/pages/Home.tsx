@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, Zap, Smartphone, Tv, HelpCircle, Mail, Phone } from "lucide-react";
+import { Check, Zap, Smartphone, Tv, HelpCircle, Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -74,6 +74,28 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Floating Contact Buttons */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/1234567890?text=Hi%20Lion%20TV%20Support%2C%20I%20need%20help%20with%20my%20activation%20code"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          title="Chat with us on WhatsApp"
+        >
+          <MessageCircle className="w-6 h-6" />
+        </a>
+        
+        {/* Email Button */}
+        <a
+          href="mailto:support@liontv.com?subject=Lion%20TV%20Support%20Request"
+          className="flex items-center justify-center w-14 h-14 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          title="Email us"
+        >
+          <Mail className="w-6 h-6" />
+        </a>
+      </div>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container py-4 flex items-center justify-between">
@@ -116,6 +138,24 @@ export default function Home() {
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 text-base">
                 Learn More
               </Button>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+              <a
+                href="https://wa.me/1234567890?text=Hi%20Lion%20TV%20Support%2C%20I%20need%20help%20with%20my%20activation%20code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold transition-colors"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat on WhatsApp
+              </a>
+              <a
+                href="mailto:support@liontv.com?subject=Lion%20TV%20Support%20Request"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold transition-colors"
+              >
+                <Mail className="w-5 h-5" />
+                Email Us
+              </a>
             </div>
             <p className="mt-8 text-sm text-muted-foreground">
               ✓ 7-Day Money Back Guarantee • ✓ 24/7 Customer Support • ✓ Instant Activation
@@ -283,17 +323,29 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-background rounded-lg p-8 border border-border text-center">
+            <div className="bg-background rounded-lg p-8 border border-border text-center hover:border-primary transition">
+              <MessageCircle className="w-10 h-10 text-green-500 mx-auto mb-4" />
+              <h3 className="font-semibold mb-2">WhatsApp Support</h3>
+              <p className="text-muted-foreground mb-4">+1 (800) 123-4567</p>
+              <a
+                href="https://wa.me/1234567890?text=Hi%20Lion%20TV%20Support%2C%20I%20need%20help%20with%20my%20activation%20code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-colors"
+              >
+                Chat Now
+              </a>
+            </div>
+            <div className="bg-background rounded-lg p-8 border border-border text-center hover:border-primary transition">
               <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
               <h3 className="font-semibold mb-2">Email Support</h3>
               <p className="text-muted-foreground mb-4">support@liontv.com</p>
-              <p className="text-sm text-muted-foreground">24/7 Support Available</p>
-            </div>
-            <div className="bg-background rounded-lg p-8 border border-border text-center">
-              <Phone className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">Phone Support</h3>
-              <p className="text-muted-foreground mb-4">+1 (800) 123-4567</p>
-              <p className="text-sm text-muted-foreground">24/7 Support Available</p>
+              <a
+                href="mailto:support@liontv.com?subject=Lion%20TV%20Support%20Request"
+                className="inline-block mt-4 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-colors"
+              >
+                Send Email
+              </a>
             </div>
           </div>
         </div>

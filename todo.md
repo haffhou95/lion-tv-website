@@ -45,3 +45,7 @@
 - [ ] Create checkpoint for version control
 - [ ] Test all links and CTAs
 - [ ] Verify SEO implementation
+
+## New Requests
+- [x] Add WhatsApp contact button
+- [x] Add email contact button
