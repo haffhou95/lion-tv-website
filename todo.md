@@ -68,3 +68,10 @@
 
 ## Vercel Deployment Bugs
 - [x] Fix vercel.json functions pattern error
+
+## Static Site Conversion for Vercel
+- [x] Convert to pure static frontend (remove Node.js backend)
+- [x] Update checkout to use simple contact form
+- [x] Remove database dependencies
+- [x] Update vercel.json for static site
+- [ ] Test on Vercel
