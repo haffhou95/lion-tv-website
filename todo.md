@@ -65,3 +65,10 @@
 ## Bugs
 - [x] Fix order creation error - "Failed to create order"
 - [x] Fix pricing plans - make them clickable to add to cart
+
+## Netlify Conversion
+- [x] Convert project to work with Netlify (remove Node.js backend, use Netlify Functions)
+- [x] Create Netlify Functions for checkout API
+- [x] Update checkout to use Netlify Functions instead of tRPC
+- [x] Create netlify.toml configuration file
+- [x] Remove server-side code dependencies
