@@ -50,3 +50,14 @@
 - [ ] Customer review system
 - [ ] Analytics integration
 - [ ] Mobile app links
+
+
+## Configuration
+- [ ] Configure order notification email: sales@iptvlion.shop
+
+
+## New Requests
+- [ ] Add 5-month subscription plan to pricing
+
+## New Requests
+- [x] Add 6-month subscription plan to pricing

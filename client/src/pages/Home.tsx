@@ -63,7 +63,13 @@ export default function Home() {
       name: "Quarterly",
       price: "$24.99",
       duration: "3 Months",
-      features: ["Full HD Streaming", "1000+ Channels", "24/7 Support", "7-Day Money Back", "Save 17%"],
+      features: ["Full HD Streaming", "1000+ Channels", "24/7 Support", "7-Day Money Back", "Save 17%"]
+    },
+    {
+      name: "6 Months",
+      price: "$44.99",
+      duration: "6 Months",
+      features: ["Full HD Streaming", "1000+ Channels", "24/7 Support", "7-Day Money Back", "Save 25%"],
       popular: true
     },
     {

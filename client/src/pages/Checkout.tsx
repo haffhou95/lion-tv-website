@@ -39,6 +39,7 @@ export default function Checkout() {
   const plans = [
     { name: "Monthly", price: 999, duration: "1 Month" },
     { name: "Quarterly", price: 2499, duration: "3 Months" },
+    { name: "6 Months", price: 4499, duration: "6 Months" },
     { name: "Annual", price: 7999, duration: "12 Months" },
   ];
 
